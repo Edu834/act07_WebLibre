@@ -1,0 +1,365 @@
+/*Maquetación*/
+*{
+    padding: 0;
+    margin: 0;
+    /* font-family: "Oswald", sans-serif; */
+    font-family: "Anta", sans-serif;
+}
+body { 
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:250px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        "zh    zh"
+        "zs    zs"
+        "zf    zf";
+    background-image: url(../fotos/barrera_de_coral.webp);
+}
+
+header {
+    grid-area: zh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #3d5a8000;
+    color: #edf2f4;
+    padding: 0 20px;
+    box-shadow: 2px 2px 10px 2px black;
+}
+
+#div_re_lo{
+    display: flex;
+}
+
+
+#div_login{
+    margin-left: 10px;
+    padding:3px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    background-color: #2b2d42;
+    cursor: pointer;
+}
+
+#div_login:hover{
+    box-shadow: inset 2px 2px 4px black;
+}
+
+#div_registro{
+    padding:3px 7px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    background-color: #2b2d42;
+    cursor: pointer;
+    
+}
+
+#div_registro:hover{
+    box-shadow: inset 2px 2px 4px black;
+}
+
+#div_foto{
+    height: 90%;
+}
+
+#div_foto>img{
+    height: 90%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px black;
+    transition: all 0.3s ease-in-out;
+}
+#div_foto>img:hover{
+    box-shadow: none;
+    
+}
+
+nav {
+    grid-area: zn;
+    background-color: #8d99ae00;
+    color: #edf2f4;
+    font-size: 30px;
+}
+
+nav>div{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.borrar_tema{
+    color: #680909 ;
+    z-index: 1;
+}
+
+.borrar_tema:hover{
+    color: #ff0000;
+}
+#añadir_tema{
+    color: green;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#añadir_tema:hover{
+    color: rgb(0, 253, 0);
+}
+nav>div>div{
+    width: 100%;
+    padding: 15px 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+nav>div>div>p{
+    margin-left: 15px;
+}
+
+.nom_tema:hover{
+    font-weight: bold;
+}
+
+.cont_men{
+    font-size: 13px;
+}
+
+nav>div>div:hover{
+    background-color: #edf2f4;
+    color: #3d5a80;
+    box-shadow: inset 3px 3px 4px black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+section {
+    font-family: 'Rye', serif;
+    font-size: 15px;
+    grid-area: zs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf2f400;
+    color: #000000;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+section>div{
+    margin: 15px;
+    background-color: #3d5a808c;
+    color: #edf2f4;
+    width: 20%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 4px black;
+    transition: all 0.3s ease-in-out;
+}
+
+section>div:hover{
+    box-shadow: none
+}
+
+section>#osteictios{
+    background-image: url(../fotos/arapaima.webp);
+    background-size: cover;
+    background-position: -225px;
+}
+section>#agnatos{
+    background-image: url(../fotos/lamprea2.webp);
+    background-size: cover;
+    background-position: -125px;
+    
+}
+section>#condrictios{
+    background-image: url(../fotos/tiburon_ballena.avif);
+    background-size: cover;
+    background-position: -80px;
+}
+
+
+section>div>.grup_pez{
+    text-align: center;
+    background-color: black;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.mis_mensajes{
+    background-color:#7c91ac ;
+    border: solid 2px #3d5a80;
+}
+section>div>div{
+    margin: 20px;
+}
+section>div>.div_men{
+    width: 100%;
+    /* position: relative; */
+}
+
+.tema_men{
+    background-color: #edf2f4;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.men_men{
+    width: 100%;
+    /* position: absolute; */
+    overflow-wrap: break-word;
+}
+
+section>#div_insert_men{
+    border-radius: 20px;
+    width: 97%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #2b2d42;
+}
+section>#div_insert_men>button{
+    border-radius: 5px 20px 20px 5px;
+    padding: 0px 5px;
+}
+section input{
+    border-radius: 20px 5px 5px 20px;
+    width: 100%;
+    height: 20px;
+    padding-left: 5px;
+    background-color: #2b2d42;
+    color: #edf2f4;
+}
+
+.borrar_mensaje{
+    color: #680909;
+    cursor: pointer; 
+}
+
+.borrar_mensaje:hover{
+    color: #ff0000;
+}
+
+footer {
+    grid-area: zf;
+    background-color:  #3d5a8094;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+    box-shadow: -2px -2px 10px 2px black;
+    
+    
+}
+
+#div_modal{
+    display: none;
+    width: 50%;
+    height: 50%;
+    background-color: #dddddd00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    z-index: 10;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_modal input{
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#div_modal>#form_login{
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 10px black;
+    height: 200px;
+    width: 310px;
+    background-color: #ddd;
+    opacity: 100%;
+}
+
+#div_modal>#form_registro{
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 10px black;
+    height: 320px;
+    width: 310px;
+    background-color: #ddd;
+    opacity: 100%;
+}
+
+form>div>div{
+    margin-bottom: 10px;
+}
+
+.botonera{
+    display: flex;
+}
+
+.botonera>div{
+    border: double black ;
+    margin-top: 20px;
+    border-radius: 10%;
+    margin-right: 20px;
+    padding: 0px 3px;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.4s;
+    
+}
+
+.botonera>div:hover{
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px black;
+}
+
+#div_error{
+    color: red;
+    text-align: center;
+}
+
+#form_añadir_tema{
+    background-color: #3d5a80;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+}
+
+@media screen and (min-width: 800px){
+    
+}
+
+@media screen and (min-width: 1000px){
+    
+   
+}
+
+@media screen and (min-width: 1400px){
+
+}
